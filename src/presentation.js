@@ -20,8 +20,10 @@ import {
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
 
+import './style.css';
+
 // Require CSS
-require('normalize.css');
+import 'normalize.css';
 
 const theme = createTheme(
   {

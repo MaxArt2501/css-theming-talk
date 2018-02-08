@@ -1,0 +1,9 @@
+.round {
+  border-radius: 100vmax;
+}
+.bordered {
+  border: .25em solid #f60;
+}
+.middle-align {
+  vertical-align: middle;
+}
