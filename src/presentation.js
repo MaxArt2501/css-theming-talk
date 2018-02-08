@@ -1,29 +1,14 @@
-// Import React
 import React from 'react';
-
-// Import Spectacle Core tags
-import {
-  BlockQuote,
-  Cite,
-  Deck,
-  Heading,
-  Image,
-  ListItem,
-  List,
-  Quote,
-  Slide,
-  Text,
-} from 'spectacle';
-
-// import { Slide as NewSlide } from './components/custom/slide';
+import { Deck } from 'spectacle';
 
 // Import theme
 import createTheme from 'spectacle/lib/themes/default';
 
 import './style.css';
-
-// Require CSS
 import 'normalize.css';
+
+import { Cover } from './slides/cover';
+import { WhoIAm } from './slides/whoiam';
 
 const theme = createTheme(
   {
@@ -48,19 +33,8 @@ export default class Presentation extends React.Component {
         transitionDuration={500}
         theme={theme}
       >
-        <Slide transition={['zoom']} bgImage="img/logo-antreem-contour.svg" bgSize="133% 133%" bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="background">
-            Encapsulation and theming
-          </Heading>
-          <Text margin="1em 0 0" textColor="background" size={1} fit>
-            the new frontiers of CSS' latest challenge
-          </Text>
-          <Text margin="3em 0 0" textColor="background">
-            Massimo Artizzu
-          </Text>
-          <Image src="img/cssday.svg" margin="3em auto 0"></Image>
-          <Text textColor="text">Faenza, 2018-03-16</Text>
-        </Slide>
+        {Cover}
+        {WhoIAm}
       </Deck>
     );
   }
