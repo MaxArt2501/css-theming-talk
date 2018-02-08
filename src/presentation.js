@@ -50,10 +50,13 @@ export default class Presentation extends React.Component {
           <Heading size={1} fit caps lineHeight={1} textColor="background">
             Encapsulation and theming
           </Heading>
-          <Text margin="10px 0 0" textColor="background" size={1} fit bold>
+          <Text margin="1em 0 0" textColor="background" size={1} fit>
             the new frontiers of CSS' latest challenge
           </Text>
-          <Image src="img/cssday.svg" margin="6em auto 0"></Image>
+          <Text margin="3em 0 0" textColor="background">
+            Massimo Artizzu
+          </Text>
+          <Image src="img/cssday.svg" margin="3em auto 0"></Image>
           <Text textColor="text">Faenza, 2018-03-16</Text>
         </Slide>
       </Deck>
