@@ -9,6 +9,7 @@ import { Cover } from './slides/cover';
 import { WhoIAm } from './slides/whoiam';
 import { CSSIsEasy } from './slides/css-is-easy';
 import { WowCode } from './slides/wow-code';
+import { DoWeNeed } from './slides/do-we-need';
 
 import { theme } from './theme';
 
@@ -29,6 +30,7 @@ export default class Presentation extends React.Component {
         {WhoIAm}
         {CSSIsEasy}
         {WowCode}
+        {DoWeNeed}
       </Deck>
     );
   }
