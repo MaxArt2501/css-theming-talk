@@ -10,7 +10,7 @@ import {
 } from 'spectacle';
 
 export const WowCode = [
-  <Slide id="wow-code" bgColor="background">
+  <Slide id="wow-code" key="wow-code" bgColor="background">
     <Heading className="our-header" size={4}>The mess we witnessed&hellip;</Heading>
     <Columns align="center">
       <Appear><CodePane textSize="3vmin" lang="css" source={`
@@ -45,7 +45,7 @@ export const WowCode = [
 `.trim()}></CodePane></Appear>
     </Columns>
   </Slide>,
-  <Slide bgColor="background" bgImage="img/crying-with-wine.gif" align="flex-end flex-end" id="have-to-maintain">
+  <Slide bgColor="background" bgImage="img/crying-with-wine.gif" align="flex-end flex-end" id="have-to-maintain" key="have-to-maintain">
     <Heading size={3} textColor="background" textAlign="right" margin="0 0 1em">&hellip; and have to maintain</Heading>
   </Slide>
 ];
