@@ -7,6 +7,13 @@
 .middle-align {
   vertical-align: middle;
 }
+.our-header.our-header {
+  color: #595959;
+  text-align: left;
+  border-left: .25em solid #f60;
+  padding: .75em;
+}
+
 @keyframes shake {
 	0% { transform: translate(.2em, .1em) rotate(0deg); }
 	10% { transform: translate(-.1em, -.2em) rotate(-1deg); }

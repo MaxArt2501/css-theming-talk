@@ -7,6 +7,7 @@ import 'normalize.css';
 import { Cover } from './slides/cover';
 import { WhoIAm } from './slides/whoiam';
 import { CSSIsEasy } from './slides/css-is-easy';
+import { WowCode } from './slides/wow-code';
 
 import { theme } from './theme';
 
@@ -26,6 +27,7 @@ export default class Presentation extends React.Component {
         {Cover}
         {WhoIAm}
         {CSSIsEasy}
+        {WowCode}
       </Deck>
     );
   }

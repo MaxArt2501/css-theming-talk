@@ -16,6 +16,6 @@ export const CSSIsEasy = [
     <Heading size={1} fit textColor="background" className="shaking" caps>Cascaaading!</Heading>
   </Slide>,
   <Slide id="css-is-not-easy" bgColor="background">
-    <Heading size={1} fit textColor="text">&hellip; but not <em>easy to master!</em></Heading>
+    <Heading size={1} fit textColor="text">&hellip; but not easy to <em>master!</em></Heading>
   </Slide>
 ];
