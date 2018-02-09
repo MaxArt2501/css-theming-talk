@@ -2,6 +2,7 @@ import React from 'react';
 import { Deck } from 'spectacle';
 
 import './style.css';
+import './typography.css';
 import 'normalize.css';
 
 import { Cover } from './slides/cover';
