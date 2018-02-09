@@ -6,9 +6,12 @@ import 'normalize.css';
 
 import { Cover } from './slides/cover';
 import { WhoIAm } from './slides/whoiam';
+import { CSSIsEasy } from './slides/css-is-easy';
 
 import { theme } from './theme';
 
+// eslint-disable-next-line import/no-webpack-loader-syntax
+const code = require('raw-loader!./index.js');
 
 export default class Presentation extends React.Component {
   render() {
@@ -22,6 +25,7 @@ export default class Presentation extends React.Component {
       >
         {Cover}
         {WhoIAm}
+        {CSSIsEasy}
       </Deck>
     );
   }
