@@ -13,9 +13,6 @@ import { DoWeNeed } from './slides/do-we-need';
 
 import { theme } from './theme';
 
-// eslint-disable-next-line import/no-webpack-loader-syntax
-const code = require('raw-loader!./index.js');
-
 export default class Presentation extends React.Component {
   render() {
     return (
