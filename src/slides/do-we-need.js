@@ -18,5 +18,11 @@ export const DoWeNeed = [
     <Text textSize="4.9rem" textColor="text" margin="2em 0 0" textAlign="right" bold>
       &hellip; but the <em>global scope</em> of CSS rules!
     </Text>
+  </Slide>,
+  <Slide bgColor="background" id="what-we-need" key="what-we-need">
+    <Heading className="our-header" size={3}>As component-based UIs gain popularity&hellip;</Heading>
+    <Text textSize="4.9rem" textColor="text" margin="2em 0 0" textAlign="right" bold>
+      &hellip; we need <em>component-based</em> styles!
+    </Text>
   </Slide>
 ];
