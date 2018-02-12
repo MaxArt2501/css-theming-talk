@@ -12,6 +12,7 @@ import { WowCode } from './slides/wow-code';
 import { DoWeNeed } from './slides/do-we-need';
 import { HowToLocal } from './slides/how-to-local';
 import { FirstApproaches } from './slides/first-approaches';
+import { CSSEncapsulation } from './slides/css-encapsulation';
 
 import { theme } from './theme';
 
@@ -32,6 +33,7 @@ export default class Presentation extends React.Component {
         {DoWeNeed}
         {HowToLocal}
         {FirstApproaches}
+        {CSSEncapsulation}
       </Deck>
     );
   }
