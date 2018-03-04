@@ -1,13 +1,10 @@
 import React from 'react';
 
 import {
-  Image,
   List,
   ListItem,
   Slide,
-  Text,
   Heading,
-  Appear,
   CodePane
 } from 'spectacle';
 
@@ -17,7 +14,7 @@ export const HowToLocal = [
   </Slide>,
   <Slide bgColor="background" id="conventions" key="conventions">
     <Heading className="our-header" size={3}>We need <em>conventions</em></Heading>
-    <List textColor="text" margin="10vmin 0 0 50vmin">
+    <List textColor="text" textSize="40px" margin="100px 0 0 200px">
       <ListItem>OOCSS</ListItem>
       <ListItem>SMACSS</ListItem>
       <ListItem>&hellip;</ListItem>
@@ -26,7 +23,7 @@ export const HowToLocal = [
   </Slide>,
   <Slide bgColor="background" id="this-is-bem" key="this-is-bem">
     <Heading className="our-header" size={3}>Hello code, this is BEM:</Heading>
-    <CodePane lang="html" textSize="2.5vmin" source={`<div class="content-card">
+    <CodePane lang="html" textSize="25px" source={`<div class="content-card">
   <header class="content-card__header">...</header>
   <picture class="content-card__picture">
     <img src="..." class="content-card__image">

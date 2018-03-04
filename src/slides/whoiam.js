@@ -8,7 +8,7 @@ import {
 
 export const WhoIAm = (
   <Slide bgColor="background" id="whoiam">
-    <Image src="img/maxart.jpg" width="20vmin" className="round bordered"></Image>
+    <Image src="img/maxart.jpg" width="200px" className="round bordered"></Image>
     <Text textColor="text" margin="2em 0 0">
       Massimo Artizzu
       <Image src="img/github.svg" display="inline" width="1.5em" className="middle-align" margin="0 .25em"></Image>

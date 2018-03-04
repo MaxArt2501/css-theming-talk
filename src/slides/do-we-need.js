@@ -4,14 +4,13 @@ import {
   Image,
   Slide,
   Text,
-  Heading,
-  Appear
+  Heading
 } from 'spectacle';
 
 export const DoWeNeed = [
   <Slide bgColor="background" id="do-we-need" key="do-we-need">
     <Heading className="our-header" size={3}>Do we <em>need</em> the cascade?</Heading>
-    <Image src="img/yes-no.gif" height="40vmin" margin="10vmin auto 0"></Image>
+    <Image src="img/yes-no.gif" height="400px" margin="100px auto 0"></Image>
   </Slide>,
   <Slide bgColor="background" id="not-the-cascade" key="not-the-cascade">
     <Heading className="our-header" size={3}>The problem is <em>not</em> the cascade&hellip;</Heading>

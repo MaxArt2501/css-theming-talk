@@ -8,7 +8,7 @@ import {
 } from 'spectacle';
 
 export const Cover = (
-  <Slide transition={['zoom']} bgImage="img/logo-antreem-contour.svg" bgSize="133% 133%" bgColor="primary" id="cover">
+  <Slide transition={['zoom']} bgImage="img/logo-antreem-contour.svg" bgSize="133% 133%" bgColor="brand" id="cover">
     <Heading size={1} fit caps lineHeight={1} textColor="background">
       Encapsulation and theming
     </Heading>

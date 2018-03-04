@@ -26,6 +26,6 @@ export const CSSEncapsulation = [
   </Slide>,
   <Slide bgColor="background" id="resusability" key="resusability">
     <Heading className="our-header" size={3}>&hellip; component reusability?</Heading>
-    <Image src="img/mashup-ui.png" height="40vmin"></Image>
+    <Image src="img/mashup-ui.png" height="400px"></Image>
   </Slide>
 ];
