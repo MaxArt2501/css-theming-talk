@@ -10,18 +10,18 @@ const typeMap = {
 };
 
 export default function Columns({ type, align, children }) {
-  const klass = css`
+  const style = css`
     display: flex;
     flex-direction: ${typeMap[type]};
     align-items: ${align};
-    margin: -2vmin;
+    margin: -20px;
   `;
-  const childKlass = css`
+  const childStyle = css`
     flex: 1 0 auto;
-    margin: 2vmin;
+    margin: 20px;
   `;
-  return <div className={klass}>
-    {children.map((child, index) => <div className={childKlass} key={index}>{child}</div>)}
+  return <div className={style}>
+    {children.map((child, index) => <div className={childStyle} key={index}>{child}</div>)}
   </div>;
 }
 
