@@ -13,6 +13,7 @@ import { DoWeNeed } from './slides/do-we-need';
 import { HowToLocal } from './slides/how-to-local';
 import { FirstApproaches } from './slides/first-approaches';
 import { CSSEncapsulation } from './slides/css-encapsulation';
+import { CSSVariables } from './slides/css-variables';
 
 import { theme } from './theme';
 
@@ -34,6 +35,7 @@ export default class Presentation extends React.Component {
         {HowToLocal}
         {FirstApproaches}
         {CSSEncapsulation}
+        {CSSVariables}
       </Deck>
     );
   }
