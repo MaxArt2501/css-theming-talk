@@ -13,9 +13,6 @@ import {
 } from 'spectacle';
 
 export const CSSVariables = [
-  <Slide id="what-pierces-encapsulation" key="what-pierces-encapsulation">
-    <Heading size={2} textColor="text">One thing <em>pierces</em> the encapsulation&hellip;</Heading>
-  </Slide>,
   <Slide id="custom-variables" key="custom-variables">
     <Heading className="our-header" size={3}>With CSS """variables"""</Heading>
     <CodePane lang="css" textSize="25px" margin="2em 0 1em" source={`

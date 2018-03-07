@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {
   Image,
   List,
@@ -10,6 +9,8 @@ import {
   Heading,
   CodePane
 } from 'spectacle';
+
+import Columns from '../components/columns.js';
 
 export const CSSEncapsulation = [
   <Slide bgImage="img/blue-red-pill.gif" align="center flex-start" id="style-encapsulation" key="style-encapsulation">
@@ -29,6 +30,65 @@ export const CSSEncapsulation = [
     <Heading className="our-header" size={3}>&hellip; component reusability?</Heading>
     <Image src="img/mashup-ui.png" height="400px"></Image>
   </Slide>,
+  <Slide id="piercing-encapsulation" key="piercing-encapsulation">
+    <Heading className="our-header" size={3}>We need to <em>pierce</em><br/>the encapsulation</Heading>
+    <Columns align="center">
+      <CodePane lang="css" textSize="30px" source={`
+cool-modal nice-button /deep/ button {
+  border-radius: 0;
+}
+`.trim()}></CodePane>
+      <Image src="img/pierce.jpg" height="400px" align="right"></Image>
+    </Columns>
+  </Slide>,
+  <Slide id="deep-nope" key="deep-nope">
+    <Heading className="our-header" size={3}>&hellip; but why?!</Heading>
+    <List textColor="text" textSize="30px" margin="3em 0 2em 2em">
+      <ListItem><code>/deep/</code> defies the point of encapsulation;</ListItem>
+      <ListItem>it's <em>very</em> prone to abuses;</ListItem>
+      <ListItem>kittens cry 😿</ListItem>
+    </List>
+    <Text textColor="text" textSize="45px" textAlign="left">Support has finally been pulled from Chrome</Text>
+    <Text textColor="text" textSize="30px" textAlign="left">Soon in Angular too</Text>
+  </Slide>,
+  <Slide id="host-context" key="host-context">
+    <Heading className="our-header" size={4} margin="0 0 1em">
+      <code>:host()</code> and <code>:host-context()</code>
+    </Heading>
+    <Text textColor="text" textSize="45px" textAlign="left">
+      Shifting the control from the <em>parent</em> to the <em>child</em>
+    </Text>
+    <Columns>
+      <div>
+        <CodePane lang="css" textSize="25px" margin="1em 0 0" source={`
+:host(.hell-yeah-🤘) {
+  border-radius: .25em;
+}
+    `.trim()}></CodePane>
+        <CodePane lang="html" textSize="25px" margin="1em 0 0" source={`
+<cool-button class="hell-yeah-🤘">
+</cool-button>
+    `.trim()}></CodePane>
+      </div>
+      <div>
+        <CodePane lang="css" textSize="25px" margin="1em 0 0" source={`
+:host-content(.colorfest-theme-🌈) {
+  border-radius: .25em;
+}
+    `.trim()}></CodePane>
+        <CodePane lang="html" textSize="25px" margin="1em 0 0" source={`
+<body class="colorfest-theme-🌈">
+  ...
+  <cool-button></cool-button>
+</body>
+    `.trim()}></CodePane>
+      </div>
+    </Columns>
+  </Slide>,
+  <Slide id="so-what-custom-elements" key="so-what-custom-elements">
+    <Heading className="our-header" size={2} margin="0 0 2em">So&hellip; what now?</Heading>
+    <Text textColor="text" textSize="45px" textAlign="left">What can Web Components do?</Text>
+  </Slide>,
   <Slide id="custom-example" key="custom-example">
     <Heading className="our-header" size={5}>With parameters</Heading>
     <CodePane lang="javascript" textSize="30px" margin="1em 0" source={`
@@ -47,6 +107,12 @@ customElements.define('var-button', class extends HTMLElement {
 <var-button color="navy">So cool!</var-button>
 `.trim()}></CodePane>
     <Link href="https://custom-element-styling.glitch.me/" textSize="40px">custom-element-styling.glitch.me</Link>
+  </Slide>,
+  <Slide id="expose-all-the-things" key="expose-all-the-things">
+    <Image src="img/expose-att.png"/>
+  </Slide>,
+  <Slide id="expose-all-the-things-really" key="expose-all-the-things-really">
+    <Image src="img/expose-all-tt.png"/>
   </Slide>,
   <Slide id="custom-theme" key="custom-theme">
     <Heading className="our-header" size={5}><code>theme</code> parameter</Heading>
