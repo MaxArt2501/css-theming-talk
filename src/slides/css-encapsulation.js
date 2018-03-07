@@ -8,7 +8,6 @@ import {
   Slide,
   Text,
   Heading,
-  Appear,
   CodePane
 } from 'spectacle';
 
@@ -23,7 +22,7 @@ export const CSSEncapsulation = [
     <List textColor="text" textSize="30px" margin="3em 0 0 2em">
       <ListItem>Achieve <em>true</em> encapsulation;</ListItem>
       <ListItem>small DOM &rArr; simple CSS;</ListItem>
-      <ListItem>gives easy component reusability.</ListItem>
+      <ListItem>allows easy component reusability.</ListItem>
     </List>
   </Slide>,
   <Slide id="resusability" key="resusability">
@@ -31,9 +30,9 @@ export const CSSEncapsulation = [
     <Image src="img/mashup-ui.png" height="400px"></Image>
   </Slide>,
   <Slide id="custom-example" key="custom-example">
-    <Heading className="our-header" size={3}>With parameters</Heading>
-    <CodePane lang="javascript" textSize="30px" margin="2em 0 1em" source={`
-customElements.define('submit-button', class extends HTMLElement {
+    <Heading className="our-header" size={5}>With parameters</Heading>
+    <CodePane lang="javascript" textSize="30px" margin="1em 0" source={`
+customElements.define('var-button', class extends HTMLElement {
   constructor() {
     super();
     const root = this.attachShadow({ mode: 'open' });
@@ -44,14 +43,15 @@ customElements.define('submit-button', class extends HTMLElement {
   }
 });
 `.trim()}></CodePane>
-    <CodePane lang="html" textSize="30px" source={`
-<submit-button color="navy">Send!</submit-button>
+    <CodePane lang="html" textSize="30px" margin="0 0 1em" source={`
+<var-button color="navy">So cool!</var-button>
 `.trim()}></CodePane>
+    <Link href="https://custom-element-styling.glitch.me/" textSize="40px">custom-element-styling.glitch.me</Link>
   </Slide>,
   <Slide id="custom-theme" key="custom-theme">
-    <Heading className="our-header" size={3}><code>theme</code> parameter</Heading>
-    <CodePane lang="javascript" textSize="25px" margin="2em 0 1em" source={`
-customElements.define('submit-button', class extends HTMLElement {
+    <Heading className="our-header" size={5}><code>theme</code> parameter</Heading>
+    <CodePane lang="javascript" textSize="25px" margin="1em 0" source={`
+customElements.define('var-button', class extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -66,8 +66,9 @@ customElements.define('submit-button', class extends HTMLElement {
   }
 });
 `.trim()}></CodePane>
-    <CodePane lang="html" textSize="25px" source={`
-<submit-button theme="material">Send!</submit-button>
+    <CodePane lang="html" textSize="25px" margin="0 0 1em" source={`
+<var-button theme="material">So cool!</var-button>
 `.trim()}></CodePane>
+    <Link href="https://custom-element-theming.glitch.me/" textSize="40px">custom-element-theming.glitch.me</Link>
   </Slide>
 ];
