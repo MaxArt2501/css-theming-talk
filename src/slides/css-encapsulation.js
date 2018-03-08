@@ -85,9 +85,16 @@ cool-modal nice-button /deep/ button {
       </div>
     </Columns>
   </Slide>,
+  <Slide id="host-problems" key="host-problems">
+    <Heading className="our-header" size={4}>The problem with <code>:host(-context)</code></Heading>
+    <List textColor="text">
+      <ListItem>Shifts the theming to the <em>component</em>, which means:</ListItem>
+      <ListItem>&hellip; it could only give limited choices&hellip;</ListItem>
+      <ListItem>&hellip; it's not really fit for a library.</ListItem>
+    </List>
+  </Slide>,
   <Slide id="so-what-custom-elements" key="so-what-custom-elements">
-    <Heading className="our-header" size={2} margin="0 0 2em">So&hellip; what now?</Heading>
-    <Text textColor="text" textSize="45px" textAlign="left">What can Web Components do?</Text>
+    <Heading size={3} textColor="text"><em>Components</em> should expose an interface to style them</Heading>
   </Slide>,
   <Slide id="custom-example" key="custom-example">
     <Heading className="our-header" size={5}>With parameters</Heading>
@@ -136,5 +143,10 @@ customElements.define('var-button', class extends HTMLElement {
 <var-button theme="material">So cool!</var-button>
 `.trim()}></CodePane>
     <Link href="https://custom-element-theming.glitch.me/" textSize="40px">custom-element-theming.glitch.me</Link>
+  </Slide>,
+  <Slide bgImage="img/jck.gif" align="center flex-end" id="too-strong" key="too-strong">
+    <Heading className="our-header" size={2}>
+      <Text textColor="background" textSize="inherit" caps>Too strong</Text>
+    </Heading>
   </Slide>
 ];
