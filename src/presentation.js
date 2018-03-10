@@ -11,6 +11,7 @@ import { CSSIsEasy } from './slides/css-is-easy';
 import { WowCode } from './slides/wow-code';
 import { DoWeNeed } from './slides/do-we-need';
 import { HowToLocal } from './slides/how-to-local';
+import { BEMStuff } from './slides/bem-stuff';
 import { FirstApproaches } from './slides/first-approaches';
 import { CSSEncapsulation } from './slides/css-encapsulation';
 import { CSSVariables } from './slides/css-variables';
@@ -33,6 +34,7 @@ export default class Presentation extends React.Component {
         {WowCode}
         {DoWeNeed}
         {HowToLocal}
+        {BEMStuff}
         {FirstApproaches}
         {CSSEncapsulation}
         {CSSVariables}

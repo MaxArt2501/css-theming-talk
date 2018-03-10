@@ -36,3 +36,11 @@
   transform-origin: 50% 50%;
   will-change: transform;
 }
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.blinking {
+  animation: blink 1s steps(1) infinite;
+}

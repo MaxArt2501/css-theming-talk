@@ -11,23 +11,11 @@ import {
 } from 'spectacle';
 
 export const FirstApproaches = [
-  <Slide id="bem-is" key="bem-is" transition={[ 'fade' ]}>
-    <Heading className="our-header" size={3}>BEM is&hellip;</Heading>
-    <List textColor="text" margin="50px 0 0 100px">
-      <ListItem>&hellip; effective;</ListItem>
-      <ListItem>&hellip; simple enough;</ListItem>
-      <ListItem>&hellip; <em>theme</em>-able;</ListItem>
-      <ListItem>&hellip; nice to use (with the right tools).</ListItem>
-    </List>
-  </Slide>,
-  <Slide id="bem-also-is" key="bem-also-is" transition={[ 'fade' ]}>
-    <Heading className="our-header" size={3}>&hellip; but also&hellip;</Heading>
-    <List textColor="text" margin="50px 0 0 100px">
-      <ListItem>&hellip; verbose;</ListItem>
-      <ListItem>&hellip; &ldquo;manual&rdquo;;</ListItem>
-      <ListItem>&hellip; not very readable;</ListItem>
-      <ListItem>&hellip; BOOORING!</ListItem>
-    </List>
+  <Slide id="we-need-support" key="we-need-support">
+    <Heading className="our-header" size={3}>Methodologies are ok&hellip;</Heading>
+    <Heading size={4} textColor="text" textAlign="right" margin="4em 0 0 4em">
+      &hellip; but support from the platform would be cool
+    </Heading>
   </Slide>,
   <Slide id="first-approaches" key="first-approaches">
     <Heading className="our-header" size={3}>The <code>scoped</code> attribute (2012)</Heading>
