@@ -11,6 +11,7 @@ import {
 } from 'spectacle';
 
 import Columns from '../components/columns.js';
+import BrowserSupport from '../components/browser-support.js';
 
 export const CSSEncapsulation = [
   <Slide bgImage="img/blue-red-pill.gif" align="center flex-start" id="style-encapsulation" key="style-encapsulation">
@@ -19,37 +20,49 @@ export const CSSEncapsulation = [
     </Heading>
   </Slide>,
   <Slide id="web-components" key="web-components">
-    <Heading className="our-header" size={3}>Web Components</Heading>
-    <List textColor="text" textSize="30px" margin="3em 0 0 2em">
-      <ListItem>Achieve <em>true</em> encapsulation;</ListItem>
+    <Heading className="our-header" size={3} margin="0 0 1em">Web Components</Heading>
+    <Text textColor="text" textAlign="left">Specifically, Custom Elements</Text>
+    <List textColor="text" textSize="30px" margin="1m 0 0">
+      <ListItem><em>True</em> encapsulation;</ListItem>
       <ListItem>small DOM &rArr; simple CSS;</ListItem>
-      <ListItem>allows easy component reusability.</ListItem>
+      <ListItem>easy component reusability.</ListItem>
     </List>
+  </Slide>,
+  <Slide id="custom-elements-support" key="custom-elements-support">
+    <Heading className="our-header" size={3} margin="0 0 1em">Custom Elements support</Heading>
+    <BrowserSupport support={{ chrome: '👍', firefox: '👍', edge: '🤔', safari: '👍', samsung: '🙌' }} canIUse="custom-elementsv1"></BrowserSupport>
   </Slide>,
   <Slide id="reusability" key="reusability">
     <Heading className="our-header" size={3}>&hellip; component reusability?</Heading>
     <Image src="img/mashup-ui.png" height="400px"></Image>
   </Slide>,
+  <Slide bgImage="img/the-wall.jpg" align="center flex-start" id="style-wall" key="style-wall">
+    <Heading className="our-header" size={3}>
+      <Text textColor="background" textSize="inherit">Can't pass the Wall</Text>
+    </Heading>
+  </Slide>,
   <Slide id="piercing-encapsulation" key="piercing-encapsulation">
     <Heading className="our-header" size={3}>We need to <em>pierce</em><br/>the encapsulation</Heading>
     <Columns align="center">
-      <CodePane lang="css" textSize="30px" source={`
+      <div>
+        <Text textColor="text"><code>/deep/</code>, <code>>>></code>, <code>::shadow</code></Text>
+        <CodePane lang="css" textSize="30px" margin="1em 0 0" source={`
 cool-modal nice-button /deep/ button {
   border-radius: 0;
 }
 `.trim()}></CodePane>
+      </div>
       <Image src="img/pierce.jpg" height="400px" align="right"></Image>
     </Columns>
   </Slide>,
   <Slide id="deep-nope" key="deep-nope">
     <Heading className="our-header" size={3}>&hellip; but why?!</Heading>
-    <List textColor="text" textSize="30px" margin="3em 0 2em 2em">
+    <List textColor="text" textSize="30px" margin="2em">
       <ListItem><code>/deep/</code> defies the point of encapsulation;</ListItem>
       <ListItem>it's <em>very</em> prone to abuses;</ListItem>
-      <ListItem>kittens cry 😿</ListItem>
+      <ListItem>&hellip; you'll have to fight an army of 🧟</ListItem>
     </List>
-    <Text textColor="text" textSize="45px" textAlign="left">Support has finally been pulled from Chrome</Text>
-    <Text textColor="text" textSize="30px" textAlign="left">Soon in Angular too</Text>
+    <BrowserSupport support={{ chrome: '…-63', firefox: '❌', edge: '❌', safari: '❌', samsung: '❌' }}></BrowserSupport>
   </Slide>,
   <Slide id="host-context" key="host-context">
     <Heading className="our-header" size={4} margin="0 0 1em">
@@ -116,11 +129,10 @@ customElements.define('var-button', class extends HTMLElement {
 `.trim()}></CodePane>
     <Link href="https://custom-element-styling.glitch.me/" textSize="40px">custom-element-styling.glitch.me</Link>
   </Slide>,
-  <Slide id="expose-all-the-things" key="expose-all-the-things">
-    <Image src="img/expose-att.png"/>
-  </Slide>,
-  <Slide id="expose-all-the-things-really" key="expose-all-the-things-really">
-    <Image src="img/expose-all-tt.png"/>
+  <Slide bgImage="img/weak.gif" align="center flex-start" id="too-weak" key="too-weak">
+    <Heading className="our-header" size={2}>
+      <Text textColor="background" textSize="inherit" caps>Too weak</Text>
+    </Heading>
   </Slide>,
   <Slide id="custom-theme" key="custom-theme">
     <Heading className="our-header" size={5}><code>theme</code> parameter</Heading>

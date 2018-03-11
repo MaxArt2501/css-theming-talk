@@ -32,6 +32,12 @@ button {
 .danger { --var-button-background: #fcc; }
 `.trim()}></CodePane>
   </Slide>,
+  <Slide id="expose-all-the-things" key="expose-all-the-things">
+    <Image src="img/expose-att.png"/>
+  </Slide>,
+  <Slide id="expose-all-the-things-really" key="expose-all-the-things-really">
+    <Image src="img/expose-all-tt.png"/>
+  </Slide>,
   <Slide id="custom-variables-problems" key="custom-variables-problems">
     <Heading className="our-header" size={4}>Problems with CSS variables</Heading>
     <List textColor="text">
