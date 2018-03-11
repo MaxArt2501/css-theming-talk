@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {
+  Image,
   List,
   ListItem,
   Link,
@@ -9,6 +10,9 @@ import {
   Heading,
   CodePane
 } from 'spectacle';
+
+import Columns from '../components/columns.js';
+import BrowserSupport from '../components/browser-support.js';
 
 export const FirstApproaches = [
   <Slide id="we-need-support" key="we-need-support">
@@ -39,11 +43,9 @@ export const FirstApproaches = [
       <ListItem>It doesn't <em>shield</em> from global CSS</ListItem>
       <ListItem>A better alternative was coming&hellip;</ListItem>
     </List>
-    <Text textColor="text" textSize="50px" textAlign="left">
-      Support from Chrome was pulled in v36.
-    </Text>
+    <BrowserSupport support={{ chrome: '20-36', firefox: '🏴' }}></BrowserSupport>
   </Slide>,
-  <Slide bgImage="img/vue.svg" bgPosition="100% 100%" bgSize="auto 30%" bgRepeat="no-repeat" id="not-vues-scoped" key="not-vues-scoped">
+  <Slide id="not-vues-scoped" key="not-vues-scoped">
     <Heading className="our-header" size={4}>
       It&rsquo;s <em>not</em> the same <code>scoped</code> of <Link
         href="https://vue-loader.vuejs.org/en/features/scoped-css.html">.vue files</Link>
@@ -55,7 +57,8 @@ h2 { font-size: 150%; }
   <div> <h2>Hello, world!</h2> </div>
 </template>`}></CodePane>
     <Text margin="10px 0">&#8681;</Text>
-    <CodePane lang="html" textSize="25px" width="500px" source={`<!-- Inside the <head> -->
+    <Columns>
+      <CodePane lang="html" textSize="25px" width="500px" source={`<!-- Inside the <head> -->
 <style type="text/css">
   h2[data-v-4c74d97c] { font-size: 150%; }
 </style>
@@ -64,5 +67,7 @@ h2 { font-size: 150%; }
 <div data-v-4c74d97c>
   <h2 data-v-4c74d97c>Hello, world!</h2>
 </div>`}></CodePane>
+      <Image src="img/vue.svg"></Image>
+    </Columns>
   </Slide>
 ];

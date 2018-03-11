@@ -26,7 +26,7 @@ export const CSSEncapsulation = [
       <ListItem>allows easy component reusability.</ListItem>
     </List>
   </Slide>,
-  <Slide id="resusability" key="resusability">
+  <Slide id="reusability" key="reusability">
     <Heading className="our-header" size={3}>&hellip; component reusability?</Heading>
     <Image src="img/mashup-ui.png" height="400px"></Image>
   </Slide>,
@@ -72,11 +72,11 @@ cool-modal nice-button /deep/ button {
       </div>
       <div>
         <CodePane lang="css" textSize="25px" margin="1em 0 0" source={`
-:host-content(.colorfest-theme-🌈) {
+:host-context(.colorfest-theme-🌈) {
   border-radius: .25em;
 }
     `.trim()}></CodePane>
-        <CodePane lang="html" textSize="25px" margin="1em 0 0" source={`
+        <CodePane lang="html" textSize="25px" margin="1em 0 1em" source={`
 <body class="colorfest-theme-🌈">
   ...
   <cool-button></cool-button>
@@ -84,6 +84,7 @@ cool-modal nice-button /deep/ button {
     `.trim()}></CodePane>
       </div>
     </Columns>
+    <Link href="https://host-context-styling.glitch.me/" textSize="40px">host-context-styling.glitch.me</Link>
   </Slide>,
   <Slide id="host-problems" key="host-problems">
     <Heading className="our-header" size={4}>The problem with <code>:host(-context)</code></Heading>
