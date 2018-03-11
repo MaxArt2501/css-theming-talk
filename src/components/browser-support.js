@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Image,
+  Link,
   Table,
   TableBody,
   TableHeader,
@@ -13,8 +14,8 @@ import { css } from 'emotion';
 
 const browsers = [ 'chrome', 'firefox', 'safari', 'edge', 'samsung' ];
 
-export default function BrowserSupport({ support }) {
-  const tableClass = css`
+export default function BrowserSupport({ support, canIUse }) {
+  const wrapperClass = css`
     border: 20px solid transparent;
     box-shadow: 0 0 30px rgba(0,0,0,.6);
     border-radius: 10px;
@@ -27,24 +28,30 @@ export default function BrowserSupport({ support }) {
     padding: 20px 0;
     font-size: 50px;
   `;
-  return <Table className={tableClass}>
-    <TableHeader>
-      <TableRow>
-        {browsers.map(name => <TableHeaderItem key={name} className={headerClass}>
-          <Image src={`img/${name}.png`}></Image>
-        </TableHeaderItem>)}
-      </TableRow>
-    </TableHeader>
-    <TableBody>
-      <TableRow>
-        {browsers.map(name => <TableItem key={name} textColor='text' className={itemClass}>
-          { support[name] || '' }
-        </TableItem>)}
-      </TableRow>
-    </TableBody>
-  </Table>;
+  return <div className={wrapperClass}>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          {browsers.map(name => <TableHeaderItem key={name} className={headerClass}>
+            <Image src={`img/${name}.png`}></Image>
+          </TableHeaderItem>)}
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          {browsers.map(name => <TableItem key={name} textColor='text' className={itemClass}>
+            { support[name] || '' }
+          </TableItem>)}
+        </TableRow>
+      </TableBody>
+    </Table>
+    {canIUse && <Link href={`https://caniuse.com/#feat=${canIUse}`}>
+    {`caniuse.com/#feat=${canIUse}`}
+    </Link>}
+  </div>;
 }
 
 BrowserSupport.propTypes = {
-  support: PropTypes.objectOf(PropTypes.string).isRequired
+  support: PropTypes.objectOf(PropTypes.string).isRequired,
+  canIUse: PropTypes.string
 };
