@@ -1,0 +1,46 @@
+button {
+  background: #ccc;
+  color: #000;
+  border: none;
+  border-radius: 0;
+  padding: .2em 1em;
+  font-family: inherit;
+  font-size: 100%;
+}
+:host-context(.material-theme) button {
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: .15em;
+  box-shadow: 0 .2em .07em -.15em rgba(0,0,0,.2), 0 .15em .15em 0 rgba(0,0,0,.14), 0 .07em .3em 0 rgba(0,0,0,.12);
+  padding: 0 1em;
+  font-family: inherit;
+  font-size: 100%;
+  text-transform: uppercase;
+  line-height: 2.25;
+}
+:host-context(.colorfest-🌈-theme) button {
+  background: repeating-linear-gradient(135deg, hsl(0, 100%, 50%), hsl(90, 100%, 50%), hsl(180, 100%, 50%), hsl(270, 100%, 50%), hsl(360, 100%, 50%));
+  color: white;
+  text-shadow: 0 0 .1em black;
+  font-weight: bold;
+  border-radius: .35em;
+  line-height: 2;
+  font-family: inherit;
+  font-size: 100%;
+}
+:host-context(.colorfest-🌈-theme) button:hover,
+:host-context(.colorfest-🌈-theme) button:active {
+  animation: slide 1s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    -webkit-filter: hue-rotate(0);
+    filter: hue-rotate(0);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}

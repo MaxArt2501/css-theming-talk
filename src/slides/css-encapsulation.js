@@ -116,6 +116,7 @@ cool-modal nice-button /deep/ button {
       </div>
     </Columns>
     <Link href="https://host-context-styling.glitch.me/" textSize="40px">host-context-styling.glitch.me</Link>
+    <Link href="demos/host-context-styling/index.html" textSize="40px">🏓</Link>
   </Slide>,
   <Slide id="host-problems" key="host-problems">
     <Heading className="our-header" size={4}>The problem with <code>:host(-context)</code></Heading>
@@ -146,6 +147,7 @@ customElements.define('var-button', class extends HTMLElement {
 <var-button color="navy">So cool!</var-button>
 `.trim()}></CodePane>
     <Link href="https://custom-element-styling.glitch.me/" textSize="40px">custom-element-styling.glitch.me</Link>
+    <Link href="demos/custom-element-styling/index.html" textSize="40px">🏓</Link>
   </Slide>,
   <Slide bgImage="img/weak.gif" align="center flex-start" id="too-weak" key="too-weak">
     <Heading className="our-header" size={2}>
@@ -174,6 +176,7 @@ customElements.define('var-button', class extends HTMLElement {
 <var-button theme="material">So cool!</var-button>
 `.trim()}></CodePane>
     <Link href="https://custom-element-theming.glitch.me/" textSize="40px">custom-element-theming.glitch.me</Link>
+    <Link href="demos/custom-element-theming/index.html" textSize="40px">🏓</Link>
   </Slide>,
   <Slide bgImage="img/jck.gif" align="center flex-end" id="too-strong" key="too-strong">
     <Heading className="our-header" size={2}>
