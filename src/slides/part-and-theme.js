@@ -34,12 +34,18 @@ export const PartAndTheme = [
     <Text margin="1em"><progress max="100" value="60"></progress></Text>
   </Slide>,
   <Slide id="pseudo-elements" key="pseudo-elements">
-    <Text textSize="22px" margin="0 0 1em">
+    <Text textSize="20px" margin="0 0 1em">
       {pseudoElements.map(pseudo => <code key={pseudo} className={pseudoClass}>::{pseudo}</code>)}
     </Text>
     <Link href="https://www.tjvantoll.com/2013/04/15/list-of-pseudo-elements-to-style-form-controls">
       www.tjvantoll.com/2013/04/15/list-of-pseudo-elements-to-style-form-controls
     </Link>
+  </Slide>,
+  <Slide bgImage="img/my-gosh.gif" id="so-many-pseudos" key="so-many-pseudos" align="flex-start flex-end">
+    <Heading size={2} textColor="background" textAlign="left">
+      &hellip; all 92 of them<br/>
+      <Text textSize="40%" textColor="background">(not counting the modifiers)</Text>
+    </Heading>
   </Slide>,
   <Slide id="enter-part-theme" key="enter-part-theme">
     <Heading className="our-header" size={3}>A new proposal</Heading>
@@ -160,8 +166,8 @@ fancy-card::part(button-icon) {
 `.trim()}></CodePane>
     </Columns>
   </Slide>,
-  <Slide id="theming-all-the-parts-1" key="theming-all-the-parts-1">
-    <Heading className="our-header" size={4}>Theming <em>all</em> the parts</Heading>
+  <Slide id="styling-all-the-parts-1" key="styling-all-the-parts-1">
+    <Heading className="our-header" size={4}>Styling <em>all</em> the parts</Heading>
     <CodePane lang="html" textSize="20px" margin="1em 0" source={`
 <div part="card-wrapper">
   <fancy-header
@@ -185,8 +191,8 @@ fancy-card::part(button-icon) {
 ...
 `.trim()}></CodePane>
   </Slide>,
-  <Slide id="theming-all-the-parts-2" key="theming-all-the-parts-2">
-    <Heading className="our-header" size={4}>Theming <em>all</em> the parts&hellip; with prefixes</Heading>
+  <Slide id="styling-all-the-parts-2" key="styling-all-the-parts-2">
+    <Heading className="our-header" size={4}>Styling <em>all</em> the parts&hellip; with prefixes</Heading>
     <CodePane lang="html" textSize="20px" margin="1em 0" source={`
 <div part="card-wrapper">
   <fancy-header part="* => card-*">...</fancy-header>
@@ -239,5 +245,8 @@ fancy-card::part(button-icon) {
     <BrowserSupport
       support={{ chrome: '❌', firefox: '❌', edge: '❌', safari: '❌', samsung: '❌' }}
     ></BrowserSupport>
+  </Slide>,
+  <Slide bgImage="img/disappointed.gif" id="no-theme" key="no-theme">
+    <Text textSize="250px" textAlign="right">☹️</Text>
   </Slide>
 ];

@@ -19,9 +19,14 @@ export const CSSEncapsulation = [
       <Text textColor="background" textSize="inherit">Style encapsulation</Text>
     </Heading>
   </Slide>,
+  <Slide id="css-in-js" key="css-in-js">
+    <Heading className="our-header" size={3}>CSS-in-JS</Heading>
+    <Image src="img/css-in-js.png" margin="1em auto"></Image>
+    <Link href="https://github.com/MicheleBertoli/css-in-js">github.com/MicheleBertoli/css-in-js</Link>
+  </Slide>,
   <Slide id="web-components" key="web-components">
     <Heading className="our-header" size={3} margin="0 0 1em">Web Components</Heading>
-    <Text textColor="text" textAlign="left">Specifically, Custom Elements</Text>
+    <Text textColor="text" textAlign="left">Specifically, <b>Custom Elements</b> and <b>Shadow DOM</b></Text>
     <List textColor="text" textSize="30px" margin="1m 0 0">
       <ListItem><em>True</em> encapsulation;</ListItem>
       <ListItem>small DOM &rArr; simple CSS;</ListItem>
@@ -29,10 +34,13 @@ export const CSSEncapsulation = [
     </List>
   </Slide>,
   <Slide id="custom-elements-support" key="custom-elements-support">
-    <Heading className="our-header" size={3} margin="0 0 1em">Custom Elements support</Heading>
     <BrowserSupport
       support={{ chrome: '👍', firefox: '👍', edge: '🤔', safari: '👍', samsung: '🙌' }}
       canIUse="custom-elementsv1"></BrowserSupport>
+    <Text>&nbsp;</Text>
+    <BrowserSupport
+      support={{ chrome: '👍', firefox: '🏴', edge: '🤔', safari: '🤞', samsung: '👍' }}
+      canIUse="shadowdomv1"></BrowserSupport>
   </Slide>,
   <Slide id="reusability" key="reusability">
     <Heading className="our-header" size={3}>&hellip; component reusability?</Heading>

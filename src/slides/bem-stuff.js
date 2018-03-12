@@ -126,8 +126,8 @@ export const BEMStuff = [
       <CodePane lang="scss" textSize="30px" source={`
 .card {
   &--fancy {
+    &.card { ... }
     .card {
-      ...
       &__header { ... }
       &__content { ... }
       &__picture { ... }
@@ -139,7 +139,7 @@ export const BEMStuff = [
       <CodePane lang="css" textSize="30px" source={`
 
 
-.card--fancy .card { ... }
+.card--fancy.card { ... }
 .card--fancy .card__header { ... }
 .card--fancy .card__content { ... }
 .card--fancy .card__picture { ... }
