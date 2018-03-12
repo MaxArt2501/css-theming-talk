@@ -30,7 +30,9 @@ export const CSSEncapsulation = [
   </Slide>,
   <Slide id="custom-elements-support" key="custom-elements-support">
     <Heading className="our-header" size={3} margin="0 0 1em">Custom Elements support</Heading>
-    <BrowserSupport support={{ chrome: '👍', firefox: '👍', edge: '🤔', safari: '👍', samsung: '🙌' }} canIUse="custom-elementsv1"></BrowserSupport>
+    <BrowserSupport
+      support={{ chrome: '👍', firefox: '👍', edge: '🤔', safari: '👍', samsung: '🙌' }}
+      canIUse="custom-elementsv1"></BrowserSupport>
   </Slide>,
   <Slide id="reusability" key="reusability">
     <Heading className="our-header" size={3}>&hellip; component reusability?</Heading>

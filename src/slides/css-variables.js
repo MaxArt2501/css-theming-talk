@@ -12,8 +12,10 @@ import {
   CodePane
 } from 'spectacle';
 
+import BrowserSupport from '../components/browser-support.js';
+
 export const CSSVariables = [
-  <Slide id="custom-variables" key="custom-variables">
+  <Slide id="css-variables" key="css-variables">
     <Heading className="our-header" size={3}>With CSS """variables"""</Heading>
     <CodePane lang="css" textSize="25px" margin="2em 0 1em" source={`
 button {
@@ -31,6 +33,12 @@ button {
 }
 .danger { --var-button-background: #fcc; }
 `.trim()}></CodePane>
+  </Slide>,
+  <Slide id="css-variables-support" key="css-variables-support">
+    <Heading className="our-header" size={3}>Custom properties support</Heading>
+    <BrowserSupport
+      support={{ chrome: '👍', firefox: '👍', safari: '👍', edge: '👍', samsung: '👍' }}
+      canIUse="css-variables"></BrowserSupport>
   </Slide>,
   <Slide id="expose-all-the-things" key="expose-all-the-things">
     <Image src="img/expose-att.png"/>
@@ -100,7 +108,7 @@ li:first-child {
 }
 `.trim()}></CodePane>
   </Slide>,
-  <Slide bgImage="img/disappointed.gif" align="center flex-start" id="apply-removed" key="apply-removed">
+  <Slide bgImage="img/sadness.gif" align="center flex-start" id="apply-removed" key="apply-removed">
     <Heading className="our-header" size={3}>
       <Text textColor="background" textSize="inherit">Support has been removed</Text>
     </Heading>
