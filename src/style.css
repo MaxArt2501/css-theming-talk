@@ -44,3 +44,28 @@
 .blinking {
   animation: blink 1s steps(1) infinite;
 }
+
+@keyframes head {
+  0% { transform: rotate(3deg); }
+  50% { transform: rotate(-10deg); }
+  100% { transform: rotate(3deg); }
+}
+@keyframes tentacles {
+  0% { transform: scaleY(1); }
+  50% { transform: scaleY(.97); }
+  100% { transform: scaleY(1); }
+}
+.head.head {
+  width: 42.3%;
+  animation: head 2s infinite;
+  transform-origin: 50% 90%;
+  margin-left: 35.5%;
+  margin-bottom: -16%;
+  position: relative;
+  z-index: 10;
+}
+.tentacles.tentacles {
+  width: 100%;
+  animation: tentacles 2s infinite;
+  transform-origin: 50% 100%;
+}
