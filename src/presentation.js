@@ -15,6 +15,7 @@ import { BEMStuff } from './slides/bem-stuff';
 import { FirstApproaches } from './slides/first-approaches';
 import { CSSEncapsulation } from './slides/css-encapsulation';
 import { CSSVariables } from './slides/css-variables';
+import { PartAndTheme } from './slides/part-and-theme';
 
 import { theme } from './theme';
 
@@ -38,6 +39,7 @@ export default class Presentation extends React.Component {
         {FirstApproaches}
         {CSSEncapsulation}
         {CSSVariables}
+        {PartAndTheme}
       </Deck>
     );
   }

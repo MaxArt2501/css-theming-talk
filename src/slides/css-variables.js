@@ -77,6 +77,9 @@ button {
   <Slide id="apply-but" key="apply-but">
     <Heading className="our-header" margin="0 0 1em" size={4}>But&hellip;</Heading>
     <Text textColor="text" textAlign="left">
+      &hellip; you still can't <em>nest</em> rules, so&hellip;
+    </Text>
+    <Text textColor="text" textAlign="left">
       &hellip; what about <code>:hover</code> styles?
     </Text>
     <Text textColor="text" textAlign="left">
@@ -96,5 +99,10 @@ li:first-child {
   --theme-color: red;
 }
 `.trim()}></CodePane>
+  </Slide>,
+  <Slide bgImage="img/disappointed.gif" align="center flex-start" id="apply-removed" key="apply-removed">
+    <Heading className="our-header" size={3}>
+      <Text textColor="background" textSize="inherit">Support has been removed</Text>
+    </Heading>
   </Slide>
 ];
