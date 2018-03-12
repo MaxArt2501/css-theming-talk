@@ -4,6 +4,7 @@ import { css } from 'emotion';
 import {
   Image,
   Heading,
+  Link,
   Slide,
   Text
 } from 'spectacle';
@@ -13,7 +14,7 @@ import Octopus from '../components/octopus';
 
 const octopusClass = css`
   max-width: 400px;
-`
+`;
 
 export const WhoIAm = (
   <Slide id="whoiam" key="whoiam">
@@ -28,11 +29,16 @@ export const WhoIAm = (
     <Image src="img/logo-antreem.svg"></Image>
   </Slide>,
   <Slide bgColor="brand" id="hackamirror" key="hackamirror">
-    <Columns>
+    <Columns align="center">
       <div>
         <Heading textColor="background" size={3}>
           Join us <em>today!</em>
         </Heading>
+        <Image src="img/hackamirror.svg" margin="1em 0"/>
+        <Text textColor="background">Autodromo Enzo e Dino Ferrari</Text>
+        <Text textColor="background">Piazza Ayrton Senna da Silva</Text>
+        <Text textColor="background" margin="0 0 1em">h. 20:00 - 8:00</Text>
+        <Link href="http://hackamirror.com" textSize="60px">hackamirror.com</Link>
       </div>
       <Octopus className={octopusClass}/>
     </Columns>
