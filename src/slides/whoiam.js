@@ -16,7 +16,7 @@ const octopusClass = css`
   max-width: 400px;
 `;
 
-export const WhoIAm = (
+export const WhoIAm = [
   <Slide id="whoiam" key="whoiam">
     <Image src="img/maxart.jpg" width="200px" className="round bordered"></Image>
     <Text textColor="text" margin="2em 0 0">
@@ -43,4 +43,4 @@ export const WhoIAm = (
       <Octopus className={octopusClass}/>
     </Columns>
   </Slide>
-);
+];

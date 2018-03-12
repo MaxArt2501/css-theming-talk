@@ -35,15 +35,15 @@ button {
 `.trim()}></CodePane>
   </Slide>,
   <Slide id="css-variables-support" key="css-variables-support">
-    <Heading className="our-header" size={3}>Custom properties support</Heading>
+    <Heading className="our-header" size={3} margin="0 0 1em">Custom properties support</Heading>
     <BrowserSupport
       support={{ chrome: '👍', firefox: '👍', safari: '👍', edge: '👍', samsung: '👍' }}
       canIUse="css-variables"></BrowserSupport>
   </Slide>,
-  <Slide id="expose-all-the-things" key="expose-all-the-things">
+  <Slide id="expose-all-the-things" key="expose-all-the-things" transition={[ 'fade' ]}>
     <Image src="img/expose-att.png"/>
   </Slide>,
-  <Slide id="expose-all-the-things-really" key="expose-all-the-things-really">
+  <Slide id="expose-all-the-things-really" key="expose-all-the-things-really" transition={[ 'fade' ]}>
     <Image src="img/expose-all-tt.png"/>
   </Slide>,
   <Slide id="custom-variables-problems" key="custom-variables-problems">
