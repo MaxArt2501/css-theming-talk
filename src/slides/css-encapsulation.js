@@ -19,11 +19,6 @@ export const CSSEncapsulation = [
       <Text textColor="background" textSize="inherit">Style encapsulation</Text>
     </Heading>
   </Slide>,
-  <Slide id="css-in-js" key="css-in-js">
-    <Heading className="our-header" size={3}>CSS-in-JS</Heading>
-    <Image src="img/css-in-js.png" margin="1em auto"></Image>
-    <Link href="https://github.com/MicheleBertoli/css-in-js">github.com/MicheleBertoli/css-in-js</Link>
-  </Slide>,
   <Slide id="web-components" key="web-components">
     <Heading className="our-header" size={3} margin="0 0 1em">Web Components</Heading>
     <Text textColor="text" textAlign="left">Specifically, <b>Custom Elements</b> and <b>Shadow DOM</b></Text>
@@ -32,6 +27,19 @@ export const CSSEncapsulation = [
       <ListItem>small DOM &rArr; simple CSS;</ListItem>
       <ListItem>easy component reusability.</ListItem>
     </List>
+  </Slide>,
+  <Slide id="what-about-frameworks" key="what-about-frameworks">
+    <Heading className="our-header" size={3}>What about&hellip;</Heading>
+    <Columns>
+      <Image src="img/react.svg" margin="1em"></Image>
+      <Image src="img/vue.svg" margin="1em"></Image>
+      <Image src="img/angular.svg" margin="1em"></Image>
+    </Columns>
+  </Slide>,
+  <Slide id="css-in-js" key="css-in-js">
+    <Heading className="our-header" size={3}>CSS-in-JS</Heading>
+    <Image src="img/css-in-js.png" margin="1em auto"></Image>
+    <Link href="https://github.com/MicheleBertoli/css-in-js">github.com/MicheleBertoli/css-in-js</Link>
   </Slide>,
   <Slide id="custom-elements-support" key="custom-elements-support">
     <BrowserSupport

@@ -38,7 +38,7 @@ export const FirstApproaches = [
   </Slide>,
   <Slide id="scoped-limitations" key="scoped-limitations">
     <Heading className="our-header" size={3}>Limitations of <code>scoped</code></Heading>
-    <List textColor="text" textSize="30px" margin="100px 0">
+    <List textColor="text" textSize="30px" margin="2em 0">
       <ListItem>It allows to style sub-components</ListItem>
       <ListItem>It doesn't <em>shield</em> from global CSS</ListItem>
       <ListItem>A better alternative was coming&hellip;</ListItem>
