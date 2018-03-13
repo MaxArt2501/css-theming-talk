@@ -42,6 +42,46 @@ export const CSSEncapsulation = [
     <Image src="img/css-in-js.png" margin="1em auto"></Image>
     <Link href="https://github.com/MicheleBertoli/css-in-js">github.com/MicheleBertoli/css-in-js</Link>
   </Slide>,
+  <Slide id="passing-props" key="passing-props">
+    <Heading className="our-header" size={4}>React example: using props</Heading>
+    <CodePane lang="jsx" textSize="30px" margin="1em 0 0" source={`
+import { varButton } from '../components/var-button.css';
+
+export class VarButton extends React.Component {
+  render() {
+    const themeClass = this.props.theme || '';
+    return <div className={\`\${varButton} \${themeClass}\`}>
+      ...
+    </div>;
+  }
+}
+`.trim()}></CodePane>
+  </Slide>,
+  <Slide id="styled-components" key="styled-components">
+    <Heading className="our-header" size={4}>React example: <code>styled-components</code></Heading>
+    <CodePane lang="jsx" textSize="22px" margin="1em 0" source={`
+const Button = styled.button\`
+  background: \${props => props.theme.baseColor};
+  border: none;
+  color: white;
+\`;
+Button.defaultProps = {
+  theme: { baseColor: 'red' }
+};
+
+render(
+  <form>
+    ...
+    <ThemeProvider theme={{ baseColor: 'rebeccapurple' }}>
+      <Button>Ok</Button>
+    </ThemeProvider>
+  </form>
+);
+`.trim()}></CodePane>
+    <Link href="https://www.styled-components.com/docs/advanced#theming">
+      www.styled-components.com/docs/advanced#theming
+    </Link>
+  </Slide>,
   <Slide id="custom-elements-support" key="custom-elements-support">
     <BrowserSupport
       support={{ chrome: '👍', firefox: '👍', edge: '🤔', safari: '👍', samsung: '🙌' }}
