@@ -1,4 +1,5 @@
 import React from 'react';
+import { css } from 'emotion';
 import {
   Image,
   List,
@@ -78,7 +79,15 @@ cool-modal nice-button /deep/ button {
     <List textColor="text" textSize="30px" margin="2em">
       <ListItem><code>/deep/</code> defies the point of encapsulation;</ListItem>
       <ListItem>it's <em>very</em> prone to abuses;</ListItem>
-      <ListItem>&hellip; you'll have to fight an army of 🧟</ListItem>
+      <ListItem>
+        &hellip; you'll have to fight an army of
+        <Image src="img/white-walker.png" className={css`
+          display: inline;
+          height: 1.5em;
+          vertical-align: -0.4em;
+          margin: 0 .5em;
+        `}/>
+      </ListItem>
     </List>
     <BrowserSupport support={{ chrome: '…-63', firefox: '❌', edge: '❌', safari: '❌', samsung: '❌' }}></BrowserSupport>
   </Slide>,
