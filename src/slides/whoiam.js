@@ -38,7 +38,7 @@ export const WhoIAm = [
         <Text textColor="background">Autodromo Enzo e Dino Ferrari</Text>
         <Text textColor="background">Piazza Ayrton Senna da Silva</Text>
         <Text textColor="background" margin="0 0 1em">h. 20:00 - 8:00</Text>
-        <Link href="http://hackamirror.com" textSize="60px">hackamirror.com</Link>
+        <Link href="https://hackamirror.com" textSize="60px">hackamirror.com</Link>
       </div>
       <Octopus className={octopusClass}/>
     </Columns>
