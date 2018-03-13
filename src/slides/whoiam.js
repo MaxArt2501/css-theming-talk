@@ -28,7 +28,7 @@ export const WhoIAm = [
     <Text margin="2em auto 1em">Senior developer @</Text>
     <Image src="img/logo-antreem.svg"></Image>
   </Slide>,
-  <Slide bgColor="brand" id="hackamirror" key="hackamirror">
+  <Slide bgColor="brand" progressColor="background" id="hackamirror" key="hackamirror">
     <Columns align="center">
       <div>
         <Heading textColor="background" size={3}>

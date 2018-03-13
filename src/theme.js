@@ -6,7 +6,8 @@ export const theme = createTheme(
     brand: '#f60',
     background: '#fff',
     text: '#595959',
-    alt: '#03a9fc'
+    alt: '#03a9fc',
+    quarternary: '#f60'
   },
   {
     primary: 'Raleway',

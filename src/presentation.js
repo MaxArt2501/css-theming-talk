@@ -29,6 +29,8 @@ export default class Presentation extends React.Component {
         transition={['zoom', 'slide']}
         transitionDuration={500}
         theme={theme}
+        controls={false}
+        progress="bar"
       >
         {Cover}
         {WhoIAm}
