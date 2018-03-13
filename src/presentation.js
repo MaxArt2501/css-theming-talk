@@ -16,6 +16,7 @@ import { FirstApproaches } from './slides/first-approaches';
 import { CSSEncapsulation } from './slides/css-encapsulation';
 import { CSSVariables } from './slides/css-variables';
 import { PartAndTheme } from './slides/part-and-theme';
+import { Linkography } from './slides/linkography';
 
 import { theme } from './theme';
 
@@ -40,6 +41,7 @@ export default class Presentation extends React.Component {
         {CSSEncapsulation}
         {CSSVariables}
         {PartAndTheme}
+        {Linkography}
       </Deck>
     );
   }
