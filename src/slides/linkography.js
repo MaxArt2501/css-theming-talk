@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {
+  CodePane,
   Heading,
   Link,
   List,
@@ -50,20 +51,28 @@ export const Linkography = [
     <Heading className="our-header" size={4}>Linkography - 2</Heading>
     <Heading size={5} textColor="text" margin="1em 0 0">You can find this presentation on</Heading>
     <Link textSize="150%" href="https://github.com/MaxArt2501/css-theming-talk">github.com/MaxArt2501/css-theming-talk</Link>
-    <QRCode text="https://github.com/MaxArt2501/css-theming-talk" width={300}/>
+    <QRCode text="https://github.com/MaxArt2501/css-theming-talk" width={450}/>
   </Slide>,
   <Slide id="links-3" key="links-3">
     <Heading className="our-header" size={4} margin="0 0 1em">Vote this talk and comment!</Heading>
     <Link textSize="150%" href="https://joind.in/event/cssday-2018/incapsulamento-e-theming-le-nuove-frontiere-dellultima-sfida-css">
       joind.in/event/cssday-2018/incapsulamento-e-theming-le-nuove-frontiere-dellultima-sfida-css
     </Link>
-    <QRCode text="https://joind.in/event/cssday-2018/incapsulamento-e-theming-le-nuove-frontiere-dellultima-sfida-css" width={300}/>
+    <QRCode text="https://joind.in/event/cssday-2018/incapsulamento-e-theming-le-nuove-frontiere-dellultima-sfida-css" width={450}/>
   </Slide>,
   <Slide id="links-4" key="links-4">
     <Heading className="our-header" size={4} margin="0 0 1em">Don't forget the hackathon!</Heading>
     <Columns align="center">
-      <QRCode text="https://hackamirror.com" width={400}/>
+      <QRCode text="https://hackamirror.com" width={450}/>
       <Octopus/>
     </Columns>
+  </Slide>,
+  <Slide id="questions" key="questions">
+    <CodePane lang="javascript" textSize="60px" source={`
+const list = await questions;
+for (const question of list) {
+  answer(question);
+}
+`.trim()}/>
   </Slide>
 ];
