@@ -4,11 +4,9 @@ import {
   Image,
   List,
   ListItem,
-  Link,
   Slide,
   Text,
   Heading,
-  Appear,
   CodePane
 } from 'spectacle';
 

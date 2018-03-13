@@ -1,13 +1,11 @@
 import React from 'react';
 
 import {
-  Image,
   Heading,
   Link,
   List,
   ListItem,
-  Slide,
-  Text
+  Slide
 } from 'spectacle';
 
 import { css } from 'emotion';

@@ -3,7 +3,6 @@ import React from 'react';
 import {
   List,
   ListItem,
-  Link,
   Slide,
   Text,
   Heading,
