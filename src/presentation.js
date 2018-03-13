@@ -18,14 +18,14 @@ import { CSSVariables } from './slides/css-variables';
 import { PartAndTheme } from './slides/part-and-theme';
 import { Linkography } from './slides/linkography';
 
-import { theme } from './theme';
+import { theme, deckWidth, deckHeight } from './theme';
 
 export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
-        contentWidth={1280}
-        contentHeight={960}
+        contentWidth={deckWidth}
+        contentHeight={deckHeight}
         transition={['zoom', 'slide']}
         transitionDuration={500}
         theme={theme}

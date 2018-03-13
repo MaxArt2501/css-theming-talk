@@ -14,3 +14,6 @@ export const theme = createTheme(
     secondary: 'system-ui'
   }
 );
+
+export const deckWidth = 1280;
+export const deckHeight = 960;

@@ -1,3 +1,7 @@
+#root {
+  transform-origin: 0 0;
+}
+
 .round {
   border-radius: 100vmax;
 }
