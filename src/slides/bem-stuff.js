@@ -3,6 +3,7 @@ import React from 'react';
 import {
   List,
   ListItem,
+  Notes,
   Slide,
   Text,
   Heading,
@@ -69,6 +70,10 @@ export const BEMStuff = [
 `.trim()}></CodePane>
   </Slide>,
   <Slide id="bem-modifiers-are" key="bem-modifiers-are">
+    <Notes>
+      Element modifiers are usually <em>specific</em> to one element, so they're
+      hardly reusable anyway.
+    </Notes>
     <Heading className="our-header" size={4} margin="0 0 1em">
       Element modifiers 👍 &amp; 👎
     </Heading>

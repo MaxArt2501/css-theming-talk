@@ -3,9 +3,11 @@ import React from 'react';
 import {
   CodePane,
   Heading,
+  Image,
   Link,
   List,
   ListItem,
+  Notes,
   Slide
 } from 'spectacle';
 
@@ -22,9 +24,20 @@ const itemClass = css`
   margin: .5em 0;
   font-size: 100%;
 `;
+const bannerClass = css`
+  filter: invert(1);
+  opacity: 0.65;
+  width: 600px;
+  margin: 0 0 1em;
+`;
+const octoClass = css`
+  width: 300px;
+  margin: 0 150px;
+`;
 
 export const Linkography = [
   <Slide id="links-1" key="links-1">
+    <Notes>In Monica's article there's a link to a Polymer based demo</Notes>
     <Heading className="our-header" size={4}>Linkography - 1</Heading>
     <List margin="1em 2em">
       <ListItem textColor="text" className={itemClass}>
@@ -61,10 +74,13 @@ export const Linkography = [
     <QRCode text="https://joind.in/event/cssday-2018/incapsulamento-e-theming-le-nuove-frontiere-dellultima-sfida-css" width={450}/>
   </Slide>,
   <Slide id="links-4" key="links-4">
-    <Heading className="our-header" size={4} margin="0 0 1em">Don't forget the hackathon!</Heading>
+    <Heading className="our-header" size={4} margin="0 0 1em">Don't forget to join the hackathon!</Heading>
     <Columns align="center">
       <QRCode text="https://hackamirror.com" width={450}/>
-      <Octopus/>
+      <div>
+        <Image src="img/hackamirror.svg" className={bannerClass}/>
+        <Octopus className={octoClass}/>
+      </div>
     </Columns>
   </Slide>,
   <Slide id="questions" key="questions">

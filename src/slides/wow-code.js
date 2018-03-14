@@ -3,6 +3,7 @@ import React from 'react';
 import {
   CodePane,
   Heading,
+  Notes,
   Slide
 } from 'spectacle';
 
@@ -40,6 +41,10 @@ export const WowCode = [
 `.trim()}></CodePane>
   </Slide>,
   <Slide id="wow-code-5" key="wow-code-5" bgColor="background" transition={['fade']}>
+    <Notes>
+      Utility classes aren't bad per se, but too many of them make things poorly
+      semantic and quite hard to read, and so to maintain.
+    </Notes>
     <Heading className="our-header" size={4}>The mess we witnessed&hellip;</Heading>
     <CodePane margin="80px 0 0" textSize="40px" lang="html" source={`
 <div class="rounded-corners big-margin
@@ -48,6 +53,13 @@ export const WowCode = [
 `.trim()}></CodePane>
   </Slide>,
   <Slide id="wow-code-6" key="wow-code-6" bgColor="background" transition={['fade']}>
+    <Notes>
+      Atomic CSS is actually a rational approach to utility/functional classes, and has
+      the nice effect to keep your CSS bundle very small. But the price to pay in terms
+      of readability, learning curve and package dependencies isn't negligible, and as
+      Harold Abelson said, "Programs must be written for people to read, and only
+      incidentally for machines to execute."
+    </Notes>
     <Heading className="our-header" size={4}>The mess we witnessed&hellip;</Heading>
     <CodePane margin="80px 0 0" textSize="40px" lang="html" source={`
 <div class="w-75 pv-10 ph-18 m-5

@@ -1,10 +1,12 @@
 import React from 'react';
 import { css } from 'emotion';
+import styled from 'react-emotion';
 import {
   Image,
   List,
   ListItem,
   Link,
+  Notes,
   Slide,
   Text,
   Heading,
@@ -13,6 +15,11 @@ import {
 
 import Columns from '../components/columns.js';
 import BrowserSupport from '../components/browser-support.js';
+
+const DonaldSlogan = styled('div')`
+  width: 400px;
+  font-weight: bold;
+`;
 
 export const CSSEncapsulation = [
   <Slide bgImage="img/blue-red-pill.gif" align="center flex-start" id="style-encapsulation" key="style-encapsulation">
@@ -30,11 +37,23 @@ export const CSSEncapsulation = [
     </List>
   </Slide>,
   <Slide id="what-about-frameworks" key="what-about-frameworks">
+    <Notes>
+      Some of the concepts ahead will apply to several component-based front-end frameworks too.
+      <ul>
+        <li>React made CSS-in-JS a choice of life, and caused the birth of a plethora of
+          different solutions for style encapsulation. This fragmentation also means that
+          theming in react would need not just a talk, but a whole workshop.</li>
+        <li>Angular gives freedom to choose between native Shadow DOM, emulated encapsulation
+          and simple light DOM. The point is that Angular components are <em>not</em> "ghost"
+          in the DOM, but actually stay there.</li>
+        <li>Vue is halfway between React and Angular, offering no or emulated encapsulation.</li>
+      </ul>
+    </Notes>
     <Heading className="our-header" size={3}>What about&hellip;</Heading>
     <Columns>
       <Image src="img/react.svg" margin="1em"></Image>
-      <Image src="img/vue.svg" margin="1em"></Image>
       <Image src="img/angular.svg" margin="1em"></Image>
+      <Image src="img/vue.svg" margin="1em"></Image>
     </Columns>
   </Slide>,
   <Slide id="css-in-js" key="css-in-js">
@@ -45,12 +64,10 @@ export const CSSEncapsulation = [
   <Slide id="passing-props" key="passing-props">
     <Heading className="our-header" size={4}>React example: using props</Heading>
     <CodePane lang="jsx" textSize="30px" margin="1em 0 0" source={`
-import { varButton } from '../components/var-button.css';
-
 export class VarButton extends React.Component {
   render() {
     const themeClass = this.props.theme || '';
-    return <div className={\`\${varButton} \${themeClass}\`}>
+    return <div className={themeClass}>
       ...
     </div>;
   }
@@ -59,10 +76,9 @@ export class VarButton extends React.Component {
   </Slide>,
   <Slide id="styled-components" key="styled-components">
     <Heading className="our-header" size={4}>React example: <code>styled-components</code></Heading>
-    <CodePane lang="jsx" textSize="22px" margin="1em 0" source={`
+    <CodePane lang="jsx" textSize="25px" margin="1em 0" source={`
 const Button = styled.button\`
   background: \${props => props.theme.baseColor};
-  border: none;
   color: white;
 \`;
 Button.defaultProps = {
@@ -70,12 +86,9 @@ Button.defaultProps = {
 };
 
 render(
-  <form>
-    ...
-    <ThemeProvider theme={{ baseColor: 'rebeccapurple' }}>
-      <Button>Ok</Button>
-    </ThemeProvider>
-  </form>
+  <ThemeProvider theme={{ baseColor: 'rebeccapurple' }}>
+    <Button>Ok</Button>
+  </ThemeProvider>
 );
 `.trim()}></CodePane>
     <Link href="https://www.styled-components.com/docs/advanced#theming">
@@ -203,6 +216,17 @@ customElements.define('var-button', class extends HTMLElement {
       <Text textColor="background" textSize="inherit" caps>Too weak</Text>
     </Heading>
   </Slide>,
+  <Slide id="html-2-great-again" key="html-2-great-again">
+    <Columns align="center">
+      <Image src="img/donald.png" width="400px"/>
+      <DonaldSlogan>
+        <Text fit caps textColor="#0157ae">Make</Text>
+        <Text fit caps textColor="#d42729">HTML 2.0</Text>
+        <Text fit caps textColor="#0157ae">great</Text>
+        <Text fit caps textColor="#d42729">again</Text>
+      </DonaldSlogan>
+    </Columns>
+  </Slide>,
   <Slide id="custom-theme" key="custom-theme">
     <Heading className="our-header" size={5}><code>theme</code> parameter</Heading>
     <CodePane lang="javascript" textSize="25px" margin="1em 0" source={`
@@ -228,8 +252,51 @@ customElements.define('var-button', class extends HTMLElement {
     <Link href="demos/custom-element-theming/index.html" textSize="40px">🏓</Link>
   </Slide>,
   <Slide bgImage="img/jck.gif" align="center flex-end" id="too-strong" key="too-strong">
+    <Notes>
+      The point is that you can style basically anything inside the component.
+        Component developers don't want that.
+    </Notes>
     <Heading className="our-header" size={2}>
       <Text textColor="background" textSize="inherit" caps>Too strong</Text>
     </Heading>
+  </Slide>,
+  <Slide id="why-strong" key="why-strong">
+    <Notes>
+      The same applies to passing whole CSS text strings and injecting them into
+        style elements. Breaking out of scoping context is way too easy.
+        Also even passing a class name is potentially destructive (pretty common
+        in React or anything without true encapsulation).
+    </Notes>
+    <Heading className="our-header" size={4}>Also when passing raw CSS</Heading>
+    <CodePane lang="html" textSize="25px" margin="1em 0" source={`
+<div class="stylable">Just style me!</div>
+<div class="unstylable">Can't touch me!</div>
+`.trim()}></CodePane>
+    <CodePane lang="javascript" textSize="25px" margin="0 0 1em" source={`
+customElements.define('style-test', class extends HTMLElement {
+  constructor() {
+    const style = document.createElement('style');
+    style.textContent = \`.stylable {\${this.getAttribute('raw-style')}}\`;
+    this.shadowRoot.appendChild(style);
+  }
+});
+`.trim()}></CodePane>
+    <CodePane lang="html" textSize="25px" margin="1em 0" source={`
+<style-test raw-style="color: red"></style-test>
+
+<style-test
+  raw-style="} .unstylable {font-family:'Comic Sans MS'">
+</style-test>
+`.trim()}></CodePane>
+  </Slide>,
+  <Slide id="bobby-tables" key="bobby-tables">
+    <Notes>
+      This can be mitigated with libraries that accept style objects too
+      instead of just strings, like glamor or emotion. So you don't pass a class
+      that can mess up a component, you'd pass a style object.
+    </Notes>
+    <Heading className="our-header" size={4}>Sanitize your CSS!</Heading>
+    <Image src="img/bobby-tables.png" height="400px" margin="2em auto"/>
+    <Text textColor="text">Or, maybe, use a different approach.</Text>
   </Slide>
 ];

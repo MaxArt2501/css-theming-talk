@@ -2,6 +2,7 @@ import React from 'react';
 
 import {
   Link,
+  Notes,
   Slide,
   Text,
   Heading,
@@ -51,6 +52,8 @@ export const PartAndTheme = [
     <Text textColor="text">A way to expose elements to styling</Text>
   </Slide>,
   <Slide id="how-part-works" key="how-part-works">
+    <Notes>Although you can use simple names, it's preferable to use prefixes as
+      namespaces to mitigate name clashing.</Notes>
     <Heading className="our-header" size={4}>How <code>::part()</code> works</Heading>
     <CodePane lang="html" textSize="25px" margin="2em 0 1em" source={`
 <div part="wrapper">
@@ -71,6 +74,12 @@ fancy-card::part(header) {
 `.trim()}></CodePane>
   </Slide>,
   <Slide id="what-part-can-do" key="what-part-can-do">
+    <Notes>
+      <ul>
+        <li>It <em>can</em> style pseudo-classes and pseudo-elements</li>
+        <li>It <em>cannot</em> style descendant elements</li>
+      </ul>
+    </Notes>
     <Heading className="our-header" size={4} margin="0 0 1em">What <code>::part()</code> can do</Heading>
     <Columns>
       <Text textSize="100px">👍</Text>
@@ -91,6 +100,11 @@ fancy-card::part(picture) > img {
   </Slide>,
   <Slide id="sub-parts" key="sub-parts">
     <Heading className="our-header" size={4}>Styling Custom Sub-Elements</Heading>
+    <Notes>
+      <ul>
+        <li>It <em>cannot</em> style parts of sub-components</li>
+      </ul>
+    </Notes>
     <Columns align="center">
       <CodePane lang="html" textSize="25px" margin="1em 0" source={`
 <div part="wrapper">
@@ -163,54 +177,52 @@ fancy-card::part(button-icon) {
     </Columns>
   </Slide>,
   <Slide id="styling-all-the-parts-1" key="styling-all-the-parts-1">
+    <Notes>Forwarding part names as-is: cumbersome for component developers</Notes>
     <Heading className="our-header" size={4}>Styling <em>all</em> the parts</Heading>
-    <CodePane lang="html" textSize="20px" margin="1em 0" source={`
-<div part="card-wrapper">
-  <fancy-header
-    part="header-title => header-title, header-icon => header-icon">...
-  </fancy-header>
-  <div part="card-content">
-    <fancy-picture src="..."
-      part="picture-image => picture-image, picture-caption => picture-caption">
-    </fancy-picture>
-    <div part="card-body"><slot></slot></div>
-  </div>
-  <footer part="actions">
-    <fancy-button part="button-icon => button-icon">View</fancy-button>
-  </footer>
-</div>
+    <CodePane lang="html" textSize="25px" margin="1em 0" source={`
+<fancy-header
+  part="header-title => header-title,
+        header-icon => header-icon">...
+</fancy-header>
+...
+<fancy-picture src="..."
+  part="picture-image => picture-image,
+        picture-caption => picture-caption">
+</fancy-picture>
+...
+<fancy-button part="button-icon => button-icon">View</fancy-button>
 `.trim()}></CodePane>
-    <CodePane lang="css" textSize="20px" source={`
+    <CodePane lang="css" textSize="25px" source={`
 ::part(header-title) { ... }
 ::part(header-icon) { ... }
 ::part(picture-image) { ... }
-...
 `.trim()}></CodePane>
   </Slide>,
   <Slide id="styling-all-the-parts-2" key="styling-all-the-parts-2">
+    <Notes>Forwarding parts with prefixes: cumbersome for users</Notes>
     <Heading className="our-header" size={4}>Styling <em>all</em> the parts&hellip; with prefixes</Heading>
-    <CodePane lang="html" textSize="20px" margin="1em 0" source={`
-<div part="card-wrapper">
-  <fancy-header part="* => card-*">...</fancy-header>
-  <div part="card-content">
-    <fancy-picture src="..." part="* => card-*"></fancy-picture>
-    <div part="card-body"><slot></slot></div>
-  </div>
-  <footer part="actions">
-    <fancy-button part="* => card-*">View</fancy-button>
-  </footer>
-</div>
-`.trim()}></CodePane>
-    <CodePane lang="css" textSize="20px" source={`
-::part(header-title),  ::part(card-header-title),  ::part(list-card-header-title)  { ... }
-::part(header-icon),   ::part(card-header-icon),   ::part(list-card-header-icon)   { ... }
-::part(picture-image), ::part(card-picture-image), ::part(list-card-picture-image) { ... }
+    <CodePane lang="html" textSize="25px" margin="1em 0" source={`
+<fancy-header part="* => card-*">...</fancy-header>
 ...
+<fancy-picture part="* => card-*" src="..."></fancy-picture>
+...
+<fancy-button part="* => card-*">View</fancy-button>
+`.trim()}></CodePane>
+    <CodePane lang="css" textSize="25px" source={`
+::part(header-title),
+  ::part(card-header-title),
+  ::part(list-card-header-title)  { ... }
+::part(header-icon),
+  ::part(card-header-icon),
+  ::part(list-card-header-icon)   { ... }
+::part(picture-image),
+  ::part(card-picture-image),
+  ::part(list-card-picture-image) { ... }
 `.trim()}></CodePane>
   </Slide>,
   <Slide id="theming-with-theme" key="theming-with-theme">
     <Heading className="our-header" size={4}>Theming&hellip; with <code>::theme()</code></Heading>
-    <CodePane lang="html" textSize="20px" margin="1em 0" source={`
+    <CodePane lang="html" textSize="25px" margin="1em 0" source={`
 <div part="card-wrapper">
   <fancy-header>...</fancy-header>
   <div part="card-content">
@@ -222,7 +234,7 @@ fancy-card::part(button-icon) {
   </footer>
 </div>
 `.trim()}></CodePane>
-    <CodePane lang="css" textSize="20px" source={`
+    <CodePane lang="css" textSize="25px" source={`
 ::theme(header-title) { ... }
 ::theme(header-icon) { ... }
 ::theme(picture-image) { ... }
@@ -243,6 +255,7 @@ fancy-card::part(button-icon) {
     ></BrowserSupport>
   </Slide>,
   <Slide bgImage="img/disappointed.gif" id="no-theme" key="no-theme">
+    <Notes>It looks like we're on the right track, though!</Notes>
     <Text textSize="250px" textAlign="right">☹️</Text>
   </Slide>
 ];
