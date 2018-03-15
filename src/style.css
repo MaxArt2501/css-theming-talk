@@ -25,6 +25,10 @@ pre.prism-code {
 .spectacle-content li {
   line-height: 1.5;
 }
+.spectacle-deck > button {
+  color: #cbbcbd;
+  opacity: .3;
+}
 
 @keyframes shake {
 	0% { transform: translate(.2em, .1em) rotate(0deg); }
