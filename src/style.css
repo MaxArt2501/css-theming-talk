@@ -18,6 +18,10 @@
   padding: .75em;
 }
 
+pre.prism-code {
+  background: black;
+}
+
 .spectacle-content li {
   line-height: 1.5;
 }
