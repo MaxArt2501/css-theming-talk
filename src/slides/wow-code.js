@@ -8,7 +8,7 @@ import {
 } from 'spectacle';
 
 export const WowCode = [
-  <Slide id="wow-code-1" key="wow-code-1" bgColor="background" transition={['fade']}>
+  <Slide id="wow-code-1" key="wow-code-1" bgColor="background" bgImage="img/troll-right.png" bgPosition="top right" bgSize="400px" bgRepeat="no-repeat" transition={['fade']}>
     <Heading className="our-header" size={4}>The mess we witnessed&hellip;</Heading>
     <CodePane margin="80px 0 0" textSize="40px" lang="css" source={`
 .align-right { float: right; }
