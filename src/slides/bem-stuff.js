@@ -27,7 +27,7 @@ export const BEMStuff = [
     <Text textSize="40px" textAlign="left" textColor="text">
       We have <em>modifiers</em> for that reason:
     </Text>
-    <CodePane lang="html" textSize="30px" margin="1em 0 0" source={`<style scoped>
+    <CodePane lang="html" textSize="30px" margin="1em 0 0" source={`<style>
   .var-button--big { font-size: 125%; }
   .var-button--round { border-radius: 10em; }
 </style>
