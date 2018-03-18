@@ -11,6 +11,7 @@ import {
 
 import Columns from '../components/columns';
 import Octopus from '../components/octopus';
+import { isHack } from '../status';
 
 const octopusClass = css`
   max-width: 400px;
@@ -27,20 +28,25 @@ export const WhoIAm = [
     </Text>
     <Text margin="2em auto 1em">Senior developer @</Text>
     <Image src="img/logo-antreem.svg"></Image>
-  </Slide>,
-  <Slide bgColor="brand" progressColor="background" id="hackamirror" key="hackamirror">
-    <Columns align="center">
-      <div>
-        <Heading textColor="background" size={3}>
-          Join us <em>today!</em>
-        </Heading>
-        <Image src="img/hackamirror.svg" margin="1em 0"/>
-        <Text textColor="background">Autodromo Enzo e Dino Ferrari</Text>
-        <Text textColor="background">Piazza Ayrton Senna da Silva</Text>
-        <Text textColor="background" margin="0 0 1em">h. 20:00 - 8:00</Text>
-        <Link href="https://hackamirror.com" textSize="60px">hackamirror.com</Link>
-      </div>
-      <Octopus className={octopusClass}/>
-    </Columns>
   </Slide>
 ];
+
+if (isHack) {
+  WhoIAm.push(
+    <Slide bgColor="brand" progressColor="background" id="hackamirror" key="hackamirror">
+      <Columns align="center">
+        <div>
+          <Heading textColor="background" size={3}>
+            Join us <em>today!</em>
+          </Heading>
+          <Image src="img/hackamirror.svg" margin="1em 0"/>
+          <Text textColor="background">Autodromo Enzo e Dino Ferrari</Text>
+          <Text textColor="background">Piazza Ayrton Senna da Silva</Text>
+          <Text textColor="background" margin="0 0 1em">h. 20:00 - 8:00</Text>
+          <Link href="https://hackamirror.com" textSize="60px">hackamirror.com</Link>
+        </div>
+        <Octopus className={octopusClass}/>
+      </Columns>
+    </Slide>
+  );
+}

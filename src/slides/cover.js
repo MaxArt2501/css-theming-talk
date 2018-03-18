@@ -1,11 +1,8 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import { Heading, Slide, Text } from 'spectacle';
 
-import {
-  Heading,
-  Image,
-  Slide,
-  Text
-} from 'spectacle';
+import CoverLogo from '../components/cover-logo';
+import { isCSSDay, isMFM, isFEVR } from '../status';
 
 export const Cover = (
   <Slide transition={['zoom']} bgImage="img/logo-antreem-contour.svg" bgSize="133% 133%" bgColor="brand" id="cover">
@@ -16,7 +13,6 @@ export const Cover = (
       the new frontiers of CSS' latest challenge
     </Text>
     <Text margin="3em 0 0" textColor="background">Massimo Artizzu</Text>
-    <Image src="img/cssday.svg" margin="3em auto 0"></Image>
-    <Text textColor="text">Faenza, 2018-03-16</Text>
+    <CoverLogo/>
   </Slide>
 );
