@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Element styling via parameters</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <label for="color">Select a color:</label>
+    <input type="color" id="color" value="#ff6600">
+    <br><!-- A <br> element! The horror! -->
+    <label for="radius">Set a border radius:</label>
+    <input type="range" id="radius" min="0" max="30" value="5">
+    <div>
+      <var-button color="#ff6600" radius="5">So cool!</var-button>
+    </div>
+  </body>
+</html>

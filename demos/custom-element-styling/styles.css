@@ -1,0 +1,10 @@
+:root {
+  font-family: system-ui, sans-serif;
+  font-size: 36px;
+}
+input {
+  font-size: 100%;
+}
+div {
+  margin: 1em;
+}

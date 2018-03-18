@@ -1,0 +1,53 @@
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  box-sizing: border-box;
+  border: .075em solid;
+  width: 1.5em;
+  height: 1.5em;
+  padding: .225em;
+  background-clip: content-box;
+  font-size: 100%;
+  vertical-align: middle;
+}
+input:checked {
+  background-color: currentcolor;
+}
+
+:host-context(.material-theme) input {
+  padding: 0;
+  border: .15em solid #737373;
+  border-radius: .15em;
+}
+:host-context(.material-theme) input:checked {
+  border: none;
+  background-color: #2196f3;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.1,12.7 9,17.6 20.3,6.3" fill="none" stroke="white" stroke-width="3"></path></svg>');
+}
+
+:host-context(.colorfest-🌈-theme) input {
+  border-radius: .25em;
+  padding: 0;
+  text-align: center;
+  line-height: 1.5;
+}
+:host-context(.colorfest-🌈-theme) input:checked {
+  border: none;
+  background-image: repeating-linear-gradient(135deg, hsl(0, 100%, 50%), hsl(90, 100%, 50%), hsl(180, 100%, 50%), hsl(270, 100%, 50%), hsl(360, 100%, 50%));
+  animation: slide 1s linear;
+}
+:host-context(.colorfest-🌈-theme) input:checked::before {
+  content: '👍';
+}
+@keyframes slide {
+  from {
+    -webkit-filter: hue-rotate(0);
+    filter: hue-rotate(0);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
