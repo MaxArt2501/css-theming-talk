@@ -22,8 +22,8 @@ export const BEMStuff = [
       <ListItem>&hellip; nice to use (with the right tools).</ListItem>
     </List>
   </Slide>,
-  <Slide id="styling-with-bem" key="styling-with-bem" transition={[ 'fade' ]}>
-    <Heading className="our-header" size={3} margin="0 0 1em">Styling in BEM</Heading>
+  <Slide id="theming-with-bem" key="theming-with-bem" transition={[ 'fade' ]}>
+    <Heading className="our-header" size={3} margin="0 0 1em">Theming in BEM</Heading>
     <Text textSize="40px" textAlign="left" textColor="text">
       We have <em>modifiers</em> for that reason:
     </Text>

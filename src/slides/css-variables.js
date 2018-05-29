@@ -109,7 +109,7 @@ h1 {
   <Slide bgImage="img/sadness.gif" align="center flex-start" id="apply-removed" key="apply-removed">
     <Notes>
       <p>CSS might return, but probably not in this form. @apply has also been
-        conveived with Web Components in mind, while mixing would be nice for light DOM too.</p>
+        conceived with Web Components in mind, while mixing would be nice for light DOM too.</p>
       <p>In theory you can <em>still</em> define "mixins" with CSS variables</p>
     </Notes>
     <Heading className="our-header" size={3}>

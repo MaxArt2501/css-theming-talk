@@ -16,9 +16,9 @@ export const HowToLocal = [
     <Heading className="our-header" size={3}>We need <em>conventions</em></Heading>
     <List textColor="text" textSize="40px" margin="100px 0 0 200px">
       <ListItem>OOCSS</ListItem>
-      <ListItem>SMACSS</ListItem>
-      <ListItem>&hellip;</ListItem>
-      <ListItem>BEM</ListItem>
+      <ListItem>SMACSS, ITCSS</ListItem>
+      <ListItem>SUIT, &hellip;</ListItem>
+      <ListItem>👉 <b>BEM</b></ListItem>
     </List>
   </Slide>,
   <Slide bgColor="background" id="this-is-bem" key="this-is-bem">

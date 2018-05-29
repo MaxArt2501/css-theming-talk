@@ -75,6 +75,7 @@ export class VarButton extends React.Component {
 `.trim()}></CodePane>
   </Slide>,
   <Slide id="styled-components" key="styled-components">
+    <Notes>This is made possible thanks to the new Context API that has been made available since React 16.4</Notes>
     <Heading className="our-header" size={4}>React example: <code>styled-components</code></Heading>
     <CodePane lang="jsx" textSize="25px" margin="1em 0" source={`
 const Button = styled.button\`
@@ -97,7 +98,7 @@ render(
   </Slide>,
   <Slide id="custom-elements-support" key="custom-elements-support">
     <BrowserSupport
-      support={{ chrome: '👍', firefox: '👍', edge: '🤔', safari: '👍', samsung: '🙌' }}
+      support={{ chrome: '🙌', firefox: '🏴', edge: '🤔', safari: '👍', samsung: '🙌' }}
       canIUse="custom-elementsv1"></BrowserSupport>
     <Text>&nbsp;</Text>
     <BrowserSupport
@@ -185,8 +186,11 @@ cool-modal nice-button /deep/ button {
     <List textColor="text">
       <ListItem>Shifts the theming to the <em>component</em>, which means:</ListItem>
       <ListItem>&hellip; it could only give limited choices&hellip;</ListItem>
-      <ListItem>&hellip; it's not really fit for a library.</ListItem>
+      <ListItem>&hellip; it's not really fit for a library;</ListItem>
+      <ListItem>also, <code>::host-context()</code> isn't liked very much.</ListItem>
     </List>
+    <BrowserSupport
+      support={{ chrome: '👍', firefox: ':host 🏴', edge: '❌', safari: '❌', samsung: '👍' }}></BrowserSupport>
   </Slide>,
   <Slide id="so-what-custom-elements" key="so-what-custom-elements">
     <Heading size={3} textColor="text"><em>Components</em> should expose an interface to style them</Heading>
