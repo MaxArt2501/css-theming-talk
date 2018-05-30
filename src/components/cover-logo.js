@@ -20,7 +20,7 @@ export default function CoverLogo() {
   if (isFEVR) {
     return <Fragment>
       <Image src="img/fevr.png" margin="2em auto .5em"/>
-      <Text textColor="text">Verona, 2018</Text>
+      <Text textColor="background">Verona, 2018-05-30</Text>
     </Fragment>;
   }
   return <Image src="img/logo-antreem-white.svg" margin="2em auto 0"/>
