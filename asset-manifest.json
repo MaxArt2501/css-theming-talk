@@ -1,12 +1,12 @@
 {
   "main.css": "static/css/main.789f4a95.css",
   "main.css.map": "static/css/main.789f4a95.css.map",
-  "main.js": "static/js/main.887d4e07.js",
-  "main.js.map": "static/js/main.887d4e07.js.map",
-  "static\\media\\raleway-bold-italic.ttf": "static/media/raleway-bold-italic.c7a4548f.ttf",
-  "static\\media\\raleway-bold.ttf": "static/media/raleway-bold.575e4317.ttf",
-  "static\\media\\raleway-italic.ttf": "static/media/raleway-italic.dd03a26a.ttf",
-  "static\\media\\raleway-regular.ttf": "static/media/raleway-regular.580d0778.ttf",
-  "static\\media\\raleway-thin-italic.ttf": "static/media/raleway-thin-italic.15c46f66.ttf",
-  "static\\media\\raleway-thin.ttf": "static/media/raleway-thin.9f5eec4e.ttf"
+  "main.js": "static/js/main.ab846bd2.js",
+  "main.js.map": "static/js/main.ab846bd2.js.map",
+  "static/media/raleway-bold-italic.ttf": "static/media/raleway-bold-italic.c7a4548f.ttf",
+  "static/media/raleway-bold.ttf": "static/media/raleway-bold.575e4317.ttf",
+  "static/media/raleway-italic.ttf": "static/media/raleway-italic.dd03a26a.ttf",
+  "static/media/raleway-regular.ttf": "static/media/raleway-regular.580d0778.ttf",
+  "static/media/raleway-thin-italic.ttf": "static/media/raleway-thin-italic.15c46f66.ttf",
+  "static/media/raleway-thin.ttf": "static/media/raleway-thin.9f5eec4e.ttf"
 }
